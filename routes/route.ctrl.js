@@ -15,6 +15,13 @@ const output = {
       res.render("./home.ejs", { title: "게시판 리스트", rows: rows });
     });
   },
+  write: (req, res) => {
+    res.render("./write.ejs");
+  },
+};
+
+const process = {
+  write: (req, res, next) => {},
 };
 
 module.exports = {
