@@ -3,12 +3,11 @@
 const db = require("../dbConfig/dbConfig");
 
 const output = {
-  home: (req, res) => res.render("./home.ejs"),
-};
-
-const process = {
-  create: (req, res) => {
-    const data = req.body;
+  home: (req, res, next) => {
+    const sql = `SELECT * FROM boards`;
+    db.query(sql, (err, rows) => {
+      res.render("./home.ejs", { title: "게시판 리스트", rows: rows });
+    });
   },
 };
 

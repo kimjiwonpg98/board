@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table border="1">
+      <tr>
+        <td>번호</td>
+        <td>학생번호</td>
+        <td>코드번호</td>
+        <td>제목</td>
+        <td>내용</td>
+        <td>조회수</td>
+        <td>등록일</td>
+        <td>수정일</td>
+      </tr>
+      <% for(let i=0;i<rows.length;i++) { 
+         let data = rows[i]; %>
+      <tr>
+        <td><%=data.board_no%></td>
+        <td><%=data.student_no%></td>
+        <td><%=data.board_code_no%></td>
+        <td><%=data.board_title%></td>
+        <td><%=data.board_content%></td>
+        <td><%=data.board_hit%></td>
+        <td><%=data.board_in_date%></td>
+        <td><%=data.board_update_date%></td>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>
