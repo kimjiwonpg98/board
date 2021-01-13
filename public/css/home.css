@@ -1,0 +1,39 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.5em;
+  min-width: 1000px;
+}
+
+.table tr th {
+  background-color: #c7f7e5;
+}
+
+.table tr th,
+.table tr td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.table tr td {
+  border-bottom: 1px solid #dddddd;
+}
+.writeBtn {
+  margin: 0.5em;
+  margin-left: 36em;
+  padding: 0.7em 1.5em;
+  font-size: 1.5em;
+  border: 2px solid #ffffff;
+  background-color: #c7f7e5;
+  outline: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.writeBtn:hover {
+  color: #706fd3;
+}

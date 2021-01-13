@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/board.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
     <title><%= title %></title>
   </head>
   <body>
     <h1><%= title %></h1>
-    <table border="1" class="table">
+    <table class="table">
       <tr>
-        <td>번호</td>
-        <td>학생번호</td>
-        <td>제목</td>
-        <td>조회수</td>
-        <td>등록일</td>
-        <td>수정일</td>
+        <th>번호</th>
+        <th>학생번호</th>
+        <th>제목</th>
+        <th>조회수</th>
+        <th>등록일</th>
+        <th>수정일</th>
       </tr>
       <% for(let i=0;i<rows.length;i++) { 
          let data = rows[i]; %>
