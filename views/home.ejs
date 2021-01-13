@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/main.js" defer></script>
     <title><%= title %></title>
   </head>
   <body>
     <h1><%= title %></h1>
-    <table border="1">
+    <table border="1" class="table">
       <tr>
         <td>번호</td>
         <td>학생번호</td>
@@ -28,5 +29,6 @@
       </tr>
       <%}%>
     </table>
+    <button class="writeBtn">글쓰기</button>
   </body>
 </html>
