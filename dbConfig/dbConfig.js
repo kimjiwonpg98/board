@@ -5,7 +5,7 @@ const dbConfig = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "dhakdlrjf11",
-  database: "idu-market-DB",
+  database: "marketdb",
 });
 
 dbConfig.connect();
