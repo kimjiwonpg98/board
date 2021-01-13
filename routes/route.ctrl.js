@@ -21,7 +21,16 @@ const output = {
 };
 
 const process = {
-  write: (req, res, next) => {},
+  write: (req, res) => {
+    const data = req.body;
+
+    let sql = `INSERT INTO boards(student_no, board_title, board_content, board_code_no, board_hit) 
+    VALUES(?,?,?,3,0)`;
+    const params = [data.studentNo, data.title, data.textarea];
+    db.query(sql, params, (err, rows) => {
+      if (err) throw err;
+    });
+  },
 };
 
 module.exports = {

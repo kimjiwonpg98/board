@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="/js/write.js" defer></script>
+    <title>글쓰기</title>
   </head>
-  <body></body>
+  <body>
+    <div class="titlearea">
+      <a class="title">제목</a>
+      <input type="text" class="inputTitle" placeholder="제목을 입력해주세요" />
+    </div>
+    <form class="text">
+      <p>
+        <textarea class="textarea" placeholder="글을 적어주세요"></textarea
+        ><br />
+        <a class="student">학생번호</a>
+        <input type="text" class="studentNo" />
+      </p>
+    </form>
+    <section class="buttons">
+      <button class="submitBtn">제출</button>
+      <button class="backBtn">뒤로가기</button>
+    </section>
+  </body>
 </html>
