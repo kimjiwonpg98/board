@@ -30,5 +30,6 @@ const write = () => {
   };
 
   requestWrite(post);
+  location.href = "/";
 };
 run();
