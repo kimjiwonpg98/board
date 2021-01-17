@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/board.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
     <title><%= title %></title>
   </head>
   <body>
@@ -20,12 +23,11 @@
         <th>등록일</th>
         <th>수정일</th>
       </tr>
-      <% for(let i=0;i<rows.length;i++) { 
-         let data = rows[i]; %>
+      <% for(let i = 0; i < rows.length; i++) { let data = rows[i]; %>
       <tr>
         <td><%=data.board_no%></td>
         <td><%=data.student_no%></td>
-        <td><%=data.board_title%></td>
+        <td><a href="/content/<%=data.board_no%>"><%=data.board_title%></a></td>
         <td><%=data.board_hit%></td>
         <td><%=data.board_in_date%></td>
         <td><%=data.board_update_date%></td>

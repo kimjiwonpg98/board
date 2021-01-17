@@ -18,6 +18,24 @@ const output = {
   write: (req, res) => {
     res.render("./write.ejs");
   },
+
+  content: (req, res, next) => {
+    let idx = req.params.id;
+    const sql = `SELECT board_title, board_content, board_hit, date_format(board_in_date, '%Y.%m.%d %H:%i') board_in_date FROM boards WHERE board_no = ?`;
+    const update = `UPDATE boards SET board_hit = board_hit + 1 WHERE board_no = ?`;
+    db.beginTransaction((err) => {
+      if (err) console.log(err);
+      
+      db.query(update, [parseInt(idx)], (err, rows) => {
+        if (err) console.log(err);
+        db.query(sql, [parseInt(idx)], (err, rows) => {
+          res.render("./content.ejs", { rows: rows });
+        });
+      });
+      
+    })
+    
+  },
 };
 
 const process = {
@@ -31,6 +49,7 @@ const process = {
       if (err) throw err;
     });
   },
+  
 };
 
 module.exports = {

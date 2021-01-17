@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% for (let i = 0; i < rows.length; i++) { let data = rows[i]; %>
+    <p><%=data.board_title%></p>
+    <p><%=data.board_hit%></p>
+    <textarea cols="80" rows="40"><%=data.board_content%></textarea>
+    <p><%=data.board_in_date%></p>
+    <%}%>
+  </body>
+</html>
